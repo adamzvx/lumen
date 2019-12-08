@@ -21,7 +21,8 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-// $app->withFacades();
+//aktifkan withFacades untuk template
+$app->withFacades();
 
 // $app->withEloquent();
 
@@ -64,6 +65,9 @@ $app->singleton(
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
+$app->routeMiddleware([
+    'cekumur' => App\Http\Middleware\UmurMiddleware::class,
+]);
 
 /*
 |--------------------------------------------------------------------------

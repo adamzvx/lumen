@@ -14,3 +14,14 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/hello/{nama}',function($nama){
+	return "<h1>Haloo " .$nama. "</h1>" ;
+});
+
+$router->get('/umiddleware/{umur}',['middleware'=>'cekumur',function($umur){
+	return "umur kamu adalah ". $umur;
+}]);
+
+$router->get('user','UserController@index');
+$router->get('user/tampil','UserController@getIndexView');
