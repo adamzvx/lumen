@@ -23,5 +23,9 @@ $router->get('/umiddleware/{umur}',['middleware'=>'cekumur',function($umur){
 	return "umur kamu adalah ". $umur;
 }]);
 
-$router->get('user','UserController@index');
-$router->get('user/tampil','UserController@getIndexView');
+$router->get('users','UsersController@index');
+$router->get('users/tampil','UsersController@getIndexView');
+
+
+
+$router->get('akuns','AkunController@index');

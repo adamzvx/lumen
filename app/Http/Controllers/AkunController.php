@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-Use App\Akuns;
+use App\Akun;
 
-class UserController extends Controller
+class AkunController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         // return "Ini halaman index (default) user, halo semalat datang user.";
         // $getUser = User::OrderBy("id","DESC")->paginate(10);
-        $getUser = Akuns::OrderBy("id","DESC");
+        $getUser = Akun::all()OrderBy("id","DESC");
         $row = [
             "message" => "list_user",
             "results" => $getUser

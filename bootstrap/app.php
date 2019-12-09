@@ -24,7 +24,8 @@ $app = new Laravel\Lumen\Application(
 //aktifkan withFacades untuk template
 $app->withFacades();
 
-// $app->withEloquent();
+//aktifkan withEloquent untuk ORM/ Object Relation Mapping
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
