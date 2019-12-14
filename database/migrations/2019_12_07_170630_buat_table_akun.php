@@ -15,11 +15,14 @@ class BuatTableAkun extends Migration
     {
         Schema::create('akuns', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('email');
-            $table->string('password');
+            $table->string('email')->unique();
             $table->string('nama');
+            $table->string('password');
+            $table->string('api_token');
 
+            $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
